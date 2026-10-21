@@ -3,7 +3,6 @@ package com.expense.service.dto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
-import tools.jackson.databind.PropertyNamingStrategy;
 import tools.jackson.databind.annotation.JsonNaming;
 
 import java.math.BigDecimal;
@@ -14,7 +13,6 @@ import java.sql.Timestamp;
 @Builder
 @Getter
 @Setter
-@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ExpenseDto {
 

@@ -42,7 +42,11 @@ public class ExpenseService {
 
     public boolean updateExpense(ExpenseDto expenseDto){
         setCurrency(expenseDto);
-        Optional<Expense> expenseFoundOpt = expenseReposistory.findByUserIdandExternalId(expenseDto.getUserId(), expenseDto.getExternalId());
+        Optional<Expense> expenseFoundOpt =
+                expenseReposistory.findByUserIdAndExternalId(
+                        expenseDto.getUserId(),
+                        expenseDto.getExternalId()
+                );
         if(expenseFoundOpt.isEmpty()){
             return false;
         }

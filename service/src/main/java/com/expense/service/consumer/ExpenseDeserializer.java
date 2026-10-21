@@ -4,7 +4,7 @@ import com.expense.service.dto.ExpenseDto;
 import org.apache.kafka.common.serialization.Deserializer;
 import tools.jackson.databind.ObjectMapper;
 
-public class ExpenseDeseralizer implements Deserializer<ExpenseDto> {
+public class ExpenseDeserializer implements Deserializer<ExpenseDto> {
 
    @Override
     public void close() {

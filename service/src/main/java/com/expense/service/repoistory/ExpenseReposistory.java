@@ -11,7 +11,14 @@ public interface ExpenseReposistory extends CrudRepository<Expense, Long> {
 
     List<Expense> findByUserId(String userId);
 
-    List<Expense> findByUserIdAndCreatedBetween(String userId, Timestamp startTime, Timestamp endTime);
+    List<Expense> findByUserIdAndCreatedAtBetween(
+            String userId,
+            Timestamp startTime,
+            Timestamp endTime
+    );
 
-    Optional<Expense> findByUserIdandExternalId(String userId, String externalId);
+    Optional<Expense> findByUserIdAndExternalId(
+            String userId,
+            String externalId
+    );
 }
